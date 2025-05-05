@@ -1,0 +1,31 @@
+﻿@model PortfolioCore.Entities.Testimonial
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2> Referans Güncelleme Sayfası</h2>
+<form method="post">
+    <input type="hidden" asp-for="TestimonialId" />
+
+    <label>AdSoyad</label>
+    <input type="text" class="form-control" asp-for="NameSurname" style="border:1px solid black;" />
+    <br />
+
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" style="border:1px solid black;" />
+    <br />
+
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="CommentDetail" style="border:1px solid black;" />
+    <br />
+
+    <label>Resim Linki</label>
+    <input type="text" class="form-control" asp-for="ImageUrl" style="border:1px solid black;" />
+    <br />
+
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+
+

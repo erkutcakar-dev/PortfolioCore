@@ -1,0 +1,50 @@
+﻿@model PortfolioCore.Entities.About
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<h2> Yeni Hakkımda Güncelleme Sayfası</h2>
+<form method="post">
+    <label >Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" style="border:1px solid black;" />
+    <br />
+
+    <label>Alt Açıklama</label>
+    <input type="text" class="form-control" asp-for="SubTitle" style="border:1px solid black;" />
+    <br />
+
+    <label>Doğum Tarihi</label>
+    <input type="text" class="form-control" asp-for="Birtday" style="border:1px solid black;" />
+    <br />
+
+    <label>Web Site</label>
+    <textarea class="form-control" asp-for="website" rows="15" style="border:1px solid black;"></textarea>
+    <br />
+     <label>Telefon</label>
+    <textarea class="form-control" asp-for="Phone" rows="15" style="border:1px solid black;"></textarea>
+    <br />
+     <label>Şehir</label>
+    <textarea class="form-control" asp-for="City" rows="15" style="border:1px solid black;"></textarea>
+    <br />
+     <label>Yaş</label>
+    <textarea class="form-control" asp-for="Age" rows="15" style="border:1px solid black;"></textarea>
+    <br />
+     <label>Eğitim Derecesi</label>
+    <textarea class="form-control" asp-for="Degree" rows="15" style="border:1px solid black;"></textarea>
+    <br />
+     <label>Email</label>
+    <textarea class="form-control" asp-for="Email" rows="15" style="border:1px solid black;"></textarea>
+    <br />
+     <label>Çalışma Durumu</label>
+    <textarea class="form-control" asp-for="Freelance" rows="15" style="border:1px solid black;"></textarea>
+    <br />
+     <label>Fotoğraf Linki</label>
+    <textarea class="form-control" asp-for="ImageUrl" rows="15" style="border:1px solid black;"></textarea>
+    <br />
+
+    <button class="btn btn-primary"> Güncelleme</button>
+
+   </form>

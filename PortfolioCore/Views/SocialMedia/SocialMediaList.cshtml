@@ -1,0 +1,33 @@
+﻿@model List<PortfolioCore.Entities.SocialMedia>
+@{
+    ViewData["Title"] = "SocialMediaList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    
+}
+
+
+<h2>Sosyal Medya Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>        
+        <th>Icon</th>
+        <th>Link</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        
+        <tr>
+            <td>@item.SocialMediaId</td>
+            <td>@item.IconUrl</td>
+            <td>@item.Link</td>
+
+            <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/SocialMedia/CreateSocialMedia/" class="btn btn-primary">Sosyal Medya Ekle</a>

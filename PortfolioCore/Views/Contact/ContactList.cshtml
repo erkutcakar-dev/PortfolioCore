@@ -1,0 +1,35 @@
+﻿@model List<PortfolioCore.Entities.Contact>
+@{
+    ViewData["Title"] = "ContactList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    
+}
+
+<h2>İletişim Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Address</th>
+        <th>Telefon</th>
+        <th>Email</th>
+        <th>Konum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        
+        <tr>
+            <td>@item.ContactId</td>
+            <td>@item.Address</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Email</td>
+            <td>@item.Location</td>
+
+            <td><a href="/Contact/DeleteContact/@item.ContactId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Contact/UpdateContact/@item.ContactId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Contact/CreateContact/" class="btn btn-primary">İletişim Bilgisi Ekle</a>

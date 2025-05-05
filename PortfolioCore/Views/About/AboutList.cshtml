@@ -1,0 +1,51 @@
+﻿@model List<PortfolioCore.Entities.About>
+@{
+    ViewData["Title"] = "AboutList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+  
+}
+
+
+<h2>Hakkımda Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Alt Açıklama</th>
+        <th>Doğum Tarihi</th>
+        <th>WebSite</th>
+        <th>Telefon</th>
+        <th>Şehir</th>
+        <th>Yaş</th>
+        <th>Eğitim Derecesi</th>
+        <th>Email</th>
+        <th>Çalışma Durumu</th>
+        <th>Fotoğraf Linki Url</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+       
+        <tr>
+            <td>@item.AboutId</td>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Birtday</td>
+            <td>@item.website</td>
+            <td>@item.Phone</td>
+            <td>@item.City</td>
+            <td>@item.Age</td>
+            <td>@item.Degree</td>
+            <td>@item.Email</td>
+            <td>@item.Freelance</td>
+
+            <td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/About/CreateAbout/" class="btn btn-primary">Hakkımda Bilgisi Ekle</a>
+

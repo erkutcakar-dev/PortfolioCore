@@ -1,0 +1,27 @@
+﻿@model PortfolioCore.Entities.Service
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2> Servis Güncelleme Sayfası</h2>
+<form method="post">
+    <input type="hidden" asp-for="ServiceId" />
+
+    <label>Servis Açıklaması</label>
+    <input type="text" class="form-control" asp-for="ServiceDescription" style="border:1px solid black;" />
+    <br />
+
+    <label>Service İconu</label>
+    <input type="text" class="form-control" asp-for="ServiceIcon" style="border:1px solid black;" />
+    <br />
+
+    <label>Servis Adı</label>
+    <input type="text" class="form-control" asp-for="ServiceName" style="border:1px solid black;" />
+    <br />
+
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+
+

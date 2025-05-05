@@ -1,0 +1,36 @@
+﻿@model List<PortfolioCore.Entities.Education>
+@{
+    ViewData["Title"] = "EducationList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+  
+}
+
+<h2>Eğitim Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Okul</th>
+        <th>Tarih</th>
+        <th>Bölüm</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+      
+        <tr>
+            <td>@item.EducationId</td>
+            <td>@item.Title</td>
+            <td>@item.DateInfo</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Description</td>
+          
+            <td><a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Education/CreateEducation/" class="btn btn-primary">Eğitim Bilgisi Ekle</a>
+

@@ -1,0 +1,26 @@
+﻿@model List<SocialMedia>
+
+<footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+        <h3 class="sitename">Erkut ÇAKAR</h3>
+        <p>Sosyal Medya Hesaplarım</p>
+
+        <div class="social-links d-flex justify-content-center">
+            @foreach (var item in Model)
+            {
+                <a href="@item.Link" target="_blank" rel="noopener noreferrer">
+                    <i class="@item.IconUrl"></i>
+                </a>
+            }
+        </div>
+
+        <div class="container mt-3">
+            <div class="copyright">
+                <span>&copy;</span> <strong class="px-1 sitename">Erkut ÇAKAR</strong> <span>Tüm Hakları Saklıdır.</span>
+            </div>
+            <div class="credits">
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by <a href="https://themewagon.com">ThemeWagon</a>
+            </div>
+        </div>
+    </div>
+</footer>

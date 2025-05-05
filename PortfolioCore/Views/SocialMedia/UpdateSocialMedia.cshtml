@@ -1,0 +1,22 @@
+﻿@model PortfolioCore.Entities.SocialMedia
+
+@{
+    ViewData["Title"] = "UpdateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2> Sosyal Medya Güncelleme Sayfası</h2>
+<form method="post">
+    <input type="hidden" asp-for="SocialMediaId" />
+    <label>Icon</label>
+    <input type="text" class="form-control" asp-for="IconUrl" style="border:1px solid black;" />
+    <br />
+
+    <label>Sosyal Medya Linki</label>
+    <input type="text" class="form-control" asp-for="Link" style="border:1px solid black;" />
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+
+
